@@ -1,0 +1,39 @@
+.alert-success {
+  background-color: #c8c3cc;
+  border-color: #563f46;
+  color: black;
+}
+
+.container {
+  background-color: white;
+  width: 50%;
+  box-shadow: 0px 2px 4px 0px #e6e6e6;
+}
+
+.header {
+  width: 100%;
+}
+
+div.header>h1 {
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#logoutBtn {
+  float: right;
+}
+
+.header {
+  display: inline-flex;
+}
+
+div.header>h6 {
+  margin-right: 50px;
+  margin-bottom: 0px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  float: right;
+  display: inline-flex;
+}
