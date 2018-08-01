@@ -1,0 +1,43 @@
+<div class="row">
+  <!--<Modal show={this.state.showCreate}-->
+         <!--onHide={this.handleHideCreate}-->
+         <!--animation={true}-->
+         <!--bsSize="small">-->
+
+    <!--<Modal.Header closeButton>-->
+      <!--<Modal.Title>Create New Lesson</Modal.Title>-->
+    <!--</Modal.Header>-->
+
+    <!--<Modal.Body>-->
+      <!--<input id="wbdv-new-lesson-title-fld"-->
+             <!--class="form-control"-->
+             <!--placeholder="New Lesson Title"-->
+             <!--onChange={this.titleChanged}/>-->
+      <!--<i class="fa-lg fa fa-plus wbdv-create"-->
+         <!--onClick={this.createLesson}></i>-->
+    <!--</Modal.Body>-->
+  <!--</Modal>-->
+
+  <!--<Modal show={this.state.showDelete}-->
+         <!--onHide={this.handleHideDelete}-->
+         <!--animation={true}-->
+         <!--bsSize="small">-->
+
+    <!--<Modal.Header>-->
+      <!--<Modal.Title>Are you sure you want to delete this lesson?</Modal.Title>-->
+    <!--</Modal.Header>-->
+
+    <!--<Modal.Footer>-->
+      <!--<Button onClick={this.handleHideDelete}>No</Button>-->
+      <!--<Button bsStyle="primary"-->
+              <!--onClick={() => this.deleteLesson(this.state.lessonIdToDelete)}>-->
+      <!--Yes, I'm sure-->
+      <!--</Button>-->
+    <!--</Modal.Footer>-->
+  <!--</Modal>-->
+
+  <ul class="nav nav-tabs">
+    <app-lesson-tab></app-lesson-tab>
+    <app-lesson-tab></app-lesson-tab>
+  </ul>
+</div>
