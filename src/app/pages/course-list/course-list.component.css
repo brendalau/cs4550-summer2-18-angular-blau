@@ -1,13 +1,9 @@
-th, td {
+td {
   padding: 10px;
   border-top: 1px solid #e6e6e6;
 }
 
-td>i {
-  cursor: pointer;
-}
-
-.wbdv-course-list-header {
+.wbdv-home-page-header {
   margin: 0;
   padding: 0;
   background-color: black;
@@ -16,7 +12,7 @@ td>i {
   width: 100%
 }
 
-header.wbdv-course-list-header>h3 {
+header.wbdv-home-page-header>h3 {
   margin-left: 50px;
   margin-bottom: 0px;
   padding-top: 20px;
@@ -57,3 +53,46 @@ h6:hover {
   white-space: nowrap;
   padding-right: 15%;
 }
+
+.wbdv-course-row {
+  color: #999999;
+}
+
+.wbdv-course-title {
+  color: black;
+}
+
+th, td {
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+a, a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.spaced {
+  white-space: nowrap;
+  padding-right: 15%;
+}
+
+span>i {
+  cursor: pointer;
+}
+
+.wbdv-folder {
+  padding-right: 15px;
+}
+
+tr:hover.wbdv-course-row {
+  background-color: #f2f2f2;
+}
+
+.wbdv-edit {
+  padding-right: 5px;
+}
+
+
+
+

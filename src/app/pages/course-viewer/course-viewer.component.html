@@ -1,15 +1,47 @@
 <div>
   <header class="wbdv-course-viewer-header">
-    <h3>
-      Viewing: CS4550
-    </h3>
+    <i class="fa-lg fa fa-arrow-left wbdv-back"></i>
+    <h3>Viewing: {{course.title}}</h3>
   </header>
 
   <aside class="col-sm-4">
-    <app-module-list></app-module-list>
+    <div>
+      <ul class="wbdv-module-list">
+        <li class="list-group-item wbdv-module-list-item"
+            *ngFor="let module of course.modules"
+            [ngClass]="{'active': module.id == selectedModule.id}"
+            (click)="selectModule(module)">
+          {{module.title}}
+        </li>
+      </ul>
+    </div>
+
   </aside>
 
-  <app-module-viewer></app-module-viewer>
+  <div class="col-sm-8" id="wbdv-lesson-tabs">
+    <div class="row">
+      <ul class="nav nav-tabs">
+        <li class="nav-item"
+            *ngFor="let lesson of selectedModule.lessons"
+            (click)="selectLesson(lesson)">
+          <a class="nav-item wbdv-lesson-tab"
+             [ngClass]="{'active': lesson.id == selectedLesson.id}">
+            {{lesson.title}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-  <app-widget-list></app-widget-list>
+  <div class="col-sm-8 wbdv-widget-list">
+    <ul class="list-group">
+      <li class="list-group-item wbdv-widget-list-item">
+        <app-heading-widget></app-heading-widget>
+        <app-image-widget></app-image-widget>
+        <app-link-widget></app-link-widget>
+        <app-list-widget></app-list-widget>
+        <app-paragraph-widget></app-paragraph-widget>
+      </li>
+    </ul>
+  </div>
 </div>

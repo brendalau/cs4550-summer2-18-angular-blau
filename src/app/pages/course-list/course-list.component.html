@@ -1,22 +1,37 @@
 <div>
-  <header class="wbdv-course-list-header">
-    <h3>Course List</h3>
+  <header class="wbdv-home-page-header">
+    <h3>Home Page</h3>
     <div class="wbdv-register-login">
-      <h6>Register</h6>
-      <h6>Log In</h6>
+      <h6 routerLink="/registration">Register</h6>
+      <h6 routerLink="/login">Log In</h6>
     </div>
   </header>
 
   <table border="0" class="wbdv-course-list">
-    <thead>
     <tr class="wbdv-course-header-row">
       <td class="spaced">Title</td>
       <td>Instructor</td>
       <td>&nbsp;</td>
     </tr>
-    </thead>
-    <tbody>
-      <app-course-row></app-course-row>
-    </tbody>
+    <tr class="wbdv-course-row"
+        *ngFor="let course of courses">
+      <td class="wbdv-course-title spaced">
+        <i class="fa-lg fa fa-folder wbdv-folder"></i>
+        {{course.title}}
+      </td>
+      <td class="wbdv-instructor">
+        <!--{{course.instructor}}-->
+        Me
+      </td>
+      <td>
+    <span>
+        <i class="fa-lg fa fa-edit wbdv-edit"></i>
+        <i class="fa-lg fa fa-search-plus wbdv-search-plus"
+           (click)="selectCourse(course)"
+           routerLink="/course/{{course.id}}"></i>
+    </span>
+      </td>
+    </tr>
+
   </table>
 </div>

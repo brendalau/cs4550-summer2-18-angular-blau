@@ -8,14 +8,22 @@
   background-color: white;
   width: 50%;
   box-shadow: 0px 2px 4px 0px #e6e6e6;
+  padding: 20px;
 }
 
 h1 {
   margin-bottom: 0px;
-  padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #registerBtn {
   float: right;
+}
+
+.wbdv-button {
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  background-color: #d9d6dc;
+  padding: 10px;
 }
