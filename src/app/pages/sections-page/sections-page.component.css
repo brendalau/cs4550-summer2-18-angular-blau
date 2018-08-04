@@ -3,7 +3,7 @@ td {
   border-top: 1px solid #e6e6e6;
 }
 
-.wbdv-home-page-header {
+.wbdv-sections-page-header {
   margin: 0;
   padding: 0;
   background-color: black;
@@ -12,8 +12,7 @@ td {
   width: 100%
 }
 
-header.wbdv-home-page-header>h3 {
-  margin-left: 50px;
+header.wbdv-sections-page-header>h3 {
   margin-bottom: 0px;
   padding-top: 20px;
   padding-bottom: 15px;
@@ -28,21 +27,12 @@ h6:hover {
   color: #dcdcdc;
 }
 
-.wbdv-register-login {
-  margin-right: 50px;
-  margin-bottom: 0px;
-  padding-top: 30px;
-  padding-bottom: 15px;
-  float: right;
-  display: inline-flex;
-}
-
-.wbdv-course-header-row {
+.wbdv-section-header-row {
   background-color: #563f46;
   color: white;
 }
 
-.wbdv-course-list {
+.wbdv-section-list {
   margin: auto;
   margin-top: 30px;
   background-color: white;
@@ -54,11 +44,11 @@ h6:hover {
   padding-right: 15%;
 }
 
-.wbdv-course-row {
+.wbdv-section-row {
   color: #999999;
 }
 
-.wbdv-course-title {
+.wbdv-section-title {
   color: black;
 }
 
@@ -74,24 +64,31 @@ a, a:hover {
 
 .spaced {
   white-space: nowrap;
-  padding-right: 15%;
+  padding-right: 20%;
 }
 
 span>i {
   cursor: pointer;
 }
 
-.wbdv-folder {
+.wbdv-file {
   padding-right: 15px;
 }
 
-tr:hover.wbdv-course-row {
+tr:hover.wbdv-section-row {
   background-color: #f2f2f2;
 }
 
 .wbdv-enroll {
   padding-right: 5px;
 }
+
+.wbdv-back {
+  margin: auto 30px;
+  cursor: pointer;
+  vertical-align: 25%;
+}
+
 
 
 

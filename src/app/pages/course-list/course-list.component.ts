@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseServiceClient} from '../../services/course.service.client';
+import { CourseServiceClient } from '../../services/course.service.client';
 
 @Component({
   selector: 'app-course-list',
@@ -9,7 +9,6 @@ import {CourseServiceClient} from '../../services/course.service.client';
 export class CourseListComponent implements OnInit {
 
   courses = [];
-  selectedCourse = {};
 
   constructor(private courseService: CourseServiceClient) { }
 
@@ -17,9 +16,4 @@ export class CourseListComponent implements OnInit {
     this.courseService.findAllCourses()
       .then(courses => this.courses = courses);
   }
-
-  selectCourse(course) {
-    this.selectedCourse = course;
-  }
-
 }

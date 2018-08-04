@@ -21,7 +21,6 @@ td>i {
 }
 
 header.wbdv-admin-page-header>h3 {
-  margin-left: 50px;
   margin-bottom: 0px;
   padding-top: 20px;
   padding-bottom: 15px;
@@ -66,12 +65,45 @@ h6:hover {
   padding-right: 15%;
 }
 
-span {
-  display: none;
-}
-
 .row {
   width: 75%;
-  margin: 30px auto;
+  margin: auto;
+}
 
+.wbdv-back {
+  margin: auto 30px;
+  cursor: pointer;
+  vertical-align: 25%;
+}
+
+.wbdv-folder {
+  padding-right: 15px;
+}
+
+tr:hover.wbdv-course-row {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+tr.wbdv-course-row.active {
+  font-weight: bold;
+  color: black;
+  background-color: #f2f2f2;
+  border-color: #e6e6e6;
+}
+
+.wbdv-course-section {
+  margin-top: 30px;
+}
+
+.wbdv-course-section-row {
+  margin-top: 10px;
+}
+
+.wbdv-file {
+  padding-right: 15px;
+}
+
+span>i {
+  cursor: pointer;
 }

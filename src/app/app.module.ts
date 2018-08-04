@@ -16,6 +16,10 @@ import { LinkWidgetComponent } from './widgets/link-widget/link-widget.component
 import { ListWidgetComponent } from './widgets/list-widget/list-widget.component';
 import { ParagraphWidgetComponent } from './widgets/paragraph-widget/paragraph-widget.component';
 import { CourseServiceClient } from './services/course.service.client';
+import { SectionsPageComponent } from './pages/sections-page/sections-page.component';
+import { CreateModalComponent } from './modals/create-modal/create-modal.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { EditModalComponent } from './modals/edit-modal/edit-modal.component';
 
 
 @NgModule({
@@ -32,11 +36,15 @@ import { CourseServiceClient } from './services/course.service.client';
     ImageWidgetComponent,
     LinkWidgetComponent,
     ListWidgetComponent,
-    ParagraphWidgetComponent
+    ParagraphWidgetComponent,
+    SectionsPageComponent,
+    CreateModalComponent,
+    EditModalComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    NgbModule.forRoot()
   ],
   providers: [
     CourseServiceClient

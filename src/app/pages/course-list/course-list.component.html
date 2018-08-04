@@ -24,14 +24,11 @@
         Me
       </td>
       <td>
-    <span>
-        <i class="fa-lg fa fa-edit wbdv-edit"></i>
-        <i class="fa-lg fa fa-search-plus wbdv-search-plus"
-           (click)="selectCourse(course)"
-           routerLink="/course/{{course.id}}"></i>
-    </span>
+        <span>
+            <i class="fa-lg fa fa-edit wbdv-enroll" routerLink="/course/{{course.id}}/sections"></i>
+            <i class="fa-lg fa fa-search-plus wbdv-view" routerLink="/course/{{course.id}}"></i>
+        </span>
       </td>
     </tr>
-
   </table>
 </div>

@@ -1,0 +1,11 @@
+.wbdv-edit {
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+.wbdv-button {
+  cursor: pointer;
+  background-color: #d9d6dc;
+  padding: 10px;
+  float: right;
+}
