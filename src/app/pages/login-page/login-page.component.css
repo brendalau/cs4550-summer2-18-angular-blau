@@ -27,3 +27,7 @@ h1 {
   background-color: #d9d6dc;
   padding: 10px;
 }
+
+div.alert.hide {
+  display: none;
+}

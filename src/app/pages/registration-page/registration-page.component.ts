@@ -14,11 +14,12 @@ export class RegistrationPageComponent implements OnInit {
   username: String;
   password: String;
   password2: String;
-  fieldsAlert: false;
-  passwordAlert: false;
-  usernameAlert: false;
+  fieldsAlert: boolean;
+  passwordAlert: boolean;
+  usernameAlert: boolean;
 
   ngOnInit() {
+    this.clearAlerts();
   }
 
   clearAlerts() {
@@ -37,12 +38,17 @@ export class RegistrationPageComponent implements OnInit {
     } else {
       const user = {
         username: username,
-        password: password
+        password: password,
+        firstName: '',
+        lastName: '',
+        phoneNumber: '',
+        email: '',
+        address: '',
+        admin: false
       };
       this.userService.register(user)
-        .then(u => {
-          if (u !== null) {
-            console.log(u);
+        .then(response => {
+          if (response.status === 404) {
             this.usernameAlert = true;
           } else {
             this.router.navigate(['profile']);

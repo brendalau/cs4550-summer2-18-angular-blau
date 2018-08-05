@@ -19,13 +19,18 @@
       </div>
     </div>
   </div>
-  <!--<div class="alert alert-info" role="alert" id="usernameAlert">-->
-    <!--Username does not exist-->
-  <!--</div>-->
 
-  <!--<div class="alert alert-info" role="alert" id="fieldsAlert">-->
-    <!--Both fields are required to log in-->
-  <!--</div>-->
+  <div class="alert alert-info"
+       role="alert" id="usernameAlert"
+       [ngClass]="{'hide': !usernameAlert}">
+    Username does not exist
+  </div>
+
+  <div class="alert alert-info"
+       role="alert"
+       [ngClass]="{'hide': !fieldsAlert}">
+    Both fields are required to log in
+  </div>
 
   <form>
     <div class="form-group row">

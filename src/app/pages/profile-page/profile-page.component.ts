@@ -8,7 +8,7 @@ import { UserServiceClient } from '../../services/user.service.client';
 })
 export class ProfilePageComponent implements OnInit {
 
-  currentUser: {};
+  currentUser: {};s
 
   constructor(private userService: UserServiceClient) { }
 
