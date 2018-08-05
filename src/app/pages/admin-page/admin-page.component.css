@@ -7,10 +7,6 @@ th, td {
   border-top: 1px solid #e6e6e6;
 }
 
-td>i {
-  cursor: pointer;
-}
-
 .wbdv-admin-page-header {
   margin: 0;
   padding: 0;
@@ -43,7 +39,7 @@ h6:hover {
   display: inline-flex;
 }
 
-.wbdv-course-header-row {
+.wbdv-course-header-row, .wbdv-section-header-row {
   background-color: #563f46;
   color: white;
 }

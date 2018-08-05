@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserServiceClient } from '../../services/user.service.client';
 
 @Component({
   selector: 'app-registration-page',
@@ -7,9 +9,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private userService: UserServiceClient) { }
+
+  username: String;
+  password: String;
+  password2: String;
+  fieldsAlert: false;
+  passwordAlert: false;
+  usernameAlert: false;
 
   ngOnInit() {
   }
 
+  clearAlerts() {
+    this.fieldsAlert = false;
+    this.passwordAlert = false;
+    this.usernameAlert = false;
+  }
+
+  register = (username, password, password2) => {
+    this.clearAlerts();
+
+    if (username == null || password == null || password2 == null) {
+      this.fieldsAlert = true;
+    } else if (password !== password2) {
+      this.passwordAlert = true;
+    } else {
+      const user = {
+        username: username,
+        password: password
+      };
+      this.userService.register(user)
+        .then(u => {
+          if (u !== null) {
+            console.log(u);
+            this.usernameAlert = true;
+          } else {
+            this.router.navigate(['profile']);
+          }
+        });
+    }
+  }
 }

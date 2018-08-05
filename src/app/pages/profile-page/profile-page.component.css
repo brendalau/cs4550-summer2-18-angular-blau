@@ -1,31 +1,7 @@
-.alert-success {
-  background-color: #c8c3cc;
-  border-color: #563f46;
-  color: black;
-}
-
 .container {
-  background-color: white;
-  width: 50%;
-  box-shadow: 0px 2px 4px 0px #e6e6e6;
-}
-
-.header {
-  width: 100%;
-}
-
-div.header>h1 {
-  margin-bottom: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#logoutBtn {
-  float: right;
-}
-
-.header {
-  display: inline-flex;
+  width: 66%;
+  padding: 20px;
+  margin-top: 15px;
 }
 
 div.header>h6 {
@@ -37,3 +13,94 @@ div.header>h6 {
   float: right;
   display: inline-flex;
 }
+
+th, td {
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.wbdv-section-list {
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px #e6e6e6;
+  margin: 0px auto;
+}
+
+.spaced {
+  white-space: nowrap;
+  padding-right: 15%;
+}
+
+tr:hover.wbdv-section-row {
+  background-color: #f2f2f2;
+}
+
+.wbdv-course-section {
+  margin-top: 30px;
+}
+
+.wbdv-course-section-row {
+  margin-top: 10px;
+}
+
+.wbdv-file {
+  padding-right: 15px;
+}
+
+span>i {
+  cursor: pointer;
+}
+
+.wbdv-section-header-row {
+  background-color: #563f46;
+  color: white;
+}
+
+table {
+  width: 100%
+}
+
+.wbdv-user-info {
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px #e6e6e6;
+  margin: auto;
+  padding: 20px;
+}
+
+.wbdv-profile-header {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  display: inline-flex;
+  width: 100%
+}
+
+header.wbdv-profile-header>h3 {
+  margin-left: 50px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+h6 {
+  padding-left: 20px;
+}
+
+h6:hover {
+  cursor: pointer;
+  color: #dcdcdc;
+}
+
+h6.hide {
+  display: none;
+}
+
+.wbdv-admin-logout {
+  margin-right: 50px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  float: right;
+  display: inline-flex;
+}
+

@@ -4,6 +4,10 @@
   color: black;
 }
 
+div.alert.hide {
+  display: none;
+}
+
 .container {
   background-color: white;
   width: 50%;

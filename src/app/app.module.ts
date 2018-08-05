@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
@@ -18,8 +19,9 @@ import { ParagraphWidgetComponent } from './widgets/paragraph-widget/paragraph-w
 import { CourseServiceClient } from './services/course.service.client';
 import { SectionsPageComponent } from './pages/sections-page/sections-page.component';
 import { CreateModalComponent } from './modals/create-modal/create-modal.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditModalComponent } from './modals/edit-modal/edit-modal.component';
+import { UserServiceClient } from './services/user.service.client';
 
 
 @NgModule({
@@ -44,10 +46,12 @@ import { EditModalComponent } from './modals/edit-modal/edit-modal.component';
   imports: [
     BrowserModule,
     routing,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
   providers: [
-    CourseServiceClient
+    CourseServiceClient,
+    UserServiceClient
   ],
   bootstrap: [AppComponent]
 })

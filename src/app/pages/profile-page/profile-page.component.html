@@ -1,66 +1,121 @@
-<div class="container">
-  <div class="header">
-    <h1>Profile</h1>
-    <h6>Admin Page</h6>
+<div>
+  <header class="wbdv-profile-header">
+  <h3>Profile</h3>
+  <div class="wbdv-admin-logout">
+    <h6 routerLink="/admin">Admin Page</h6>
+    <h6 routerLink="/login">Log Out</h6>
   </div>
+  </header>
 
-  <!--<div class="alert alert-success" role="alert">-->
-    <!--Profile successfully saved-->
-  <!--</div>-->
+  <div class="container">
+    <div class="row">
+      <div class="wbdv-user-info col-sm-6">
+        <div class="form-group row">
+          <label for="usernameFld" class="col-sm-2 col-form-label">Username</label>
+          <div class="col-sm-10">
+            <input id="usernameFld"
+                   class="form-control"
+                   value="{{currentUser.username}}"
+                   placeholder="JD123"
+                   readonly
+            />
+          </div>
+        </div>
 
-  <div class="form-group row">
-    <label for="usernameFld" class="col-sm-2 col-form-label">Username</label>
-    <div class="col-sm-10">
-      <input id="usernameFld" class="form-control" placeholder="JD123" readonly/>
+        <div class="form-group row">
+          <label for="passwordFld" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input id="passwordFld"
+                   class="form-control"
+                   value="{{currentUser.password}}"
+                   placeholder="345DJ"
+                   readonly
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="firstNameFld" class="col-sm-2 col-form-label">First Name</label>
+          <div class="col-sm-10">
+            <input id="firstNameFld"
+                   class="form-control"
+                   value="{{currentUser.firstName}}"
+                   placeholder="Jane"
+                   readonly
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="lastNameFld" class="col-sm-2 col-form-label">Last Name</label>
+          <div class="col-sm-10">
+            <input id="lastNameFld"
+                   class="form-control"
+                   value="{{currentUser.lastName}}"
+                   placeholder="Doe"
+                   readonly
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="phoneFld" class="col-sm-2 col-form-label">Phone</label>
+          <div class="col-sm-10">
+            <input id="phoneFld"
+                   class="form-control"
+                   value="{{currentUser.phone}}"
+                   placeholder="123-456-789"
+                   readonly
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="emailFld" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input id="emailFld"
+                   class="form-control"
+                   value="{{currentUser.email}}"
+                   placeholder="jane@doe.com"
+                   readonly
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="addressFld" class="col-sm-2 col-form-label">Address</label>
+          <div class="col-sm-10">
+            <input id="addressFld"
+                   class="form-control"
+                   value="{{currentUser.address}}"
+                   placeholder="123 Rainbow Road, Flavortown JK"
+                   readonly
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <table border="0" class="wbdv-section-list">
+          <tr class="wbdv-section-header-row">
+            <td class="spaced">Section</td>
+            <td>Available</td>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr class="wbdv-section-row">
+            <td class="wbdv-section-title spaced">
+              <i class="fa-lg fa fa-file wbdv-file"></i>
+              CS5200 Section 1
+            </td>
+            <td class="wbdv-available">
+              1/16
+            </td>
+            <td>
+              <i class="fa-lg fa fa-search-plus wbdv-view" routerLink="/course/{{course.id}}"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="passwordFld" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input id="passwordFld" class="form-control" placeholder="4567"/>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="firstNameFld" class="col-sm-2 col-form-label">First Name</label>
-    <div class="col-sm-10">
-      <input id="firstNameFld" class="form-control" placeholder="Jane"/>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="lastNameFld" class="col-sm-2 col-form-label">Last Name</label>
-    <div class="col-sm-10">
-      <input id="lastNameFld" class="form-control" placeholder="Doe"/>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="phoneFld" class="col-sm-2 col-form-label">Phone</label>
-    <div class="col-sm-10">
-      <input id="phoneFld" class="form-control" placeholder="(123) 456-7890"/>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="emailFld" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input id="emailFld" class="form-control" placeholder="jane@doe.com"/>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="addressFld" class="col-sm-2 col-form-label">Address</label>
-    <div class="col-sm-10">
-      <input id="addressFld" class="form-control" placeholder="123 Rainbow Road, Faketown QT"/>
-    </div>
-  </div>
-
-  <div class="row profile-btn">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-10">
-      <button id="logoutBtn">Logout</button>
-    </div>
-  </div>
 </div>
