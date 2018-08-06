@@ -46,7 +46,7 @@ tr:hover.wbdv-section-row {
   padding-right: 15px;
 }
 
-span>i {
+i {
   cursor: pointer;
 }
 
@@ -102,5 +102,13 @@ h6.hide {
   padding-bottom: 15px;
   float: right;
   display: inline-flex;
+}
+
+.wbdv-button {
+  cursor: pointer;
+  background-color: #d9d6dc;
+  padding: 10px;
+  float: right;
+  margin-bottom: 10px;
 }
 

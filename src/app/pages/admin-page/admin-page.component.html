@@ -9,7 +9,7 @@
 
   <div class="wbdv-course-section">
     <div class="row">
-      <app-create-modal-component></app-create-modal-component>
+      <app-create-modal-component [selectedCourse]="selectedCourse"></app-create-modal-component>
     </div>
 
     <div class="row wbdv-course-section-row">
@@ -36,17 +36,18 @@
       <table border="0" class="wbdv-section-list col-sm-6">
         <tr class="wbdv-section-header-row">
           <td class="spaced">Section</td>
-          <td>Available</td>
+          <td>Seats</td>
           <td>&nbsp;</td>
         </tr>
 
-        <tr class="wbdv-section-row">
+        <tr class="wbdv-section-row"
+            *ngFor="let section of sections">
           <td class="wbdv-section-title spaced">
             <i class="fa-lg fa fa-file wbdv-file"></i>
-            CS5200 Section 1
+            {{section.title}}
           </td>
-          <td class="wbdv-available">
-            1/16
+          <td class="wbdv-seats">
+            {{section.seats}}
           </td>
           <td>
             <span>

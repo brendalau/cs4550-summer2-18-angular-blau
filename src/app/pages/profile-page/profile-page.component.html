@@ -2,94 +2,84 @@
   <header class="wbdv-profile-header">
   <h3>Profile</h3>
   <div class="wbdv-admin-logout">
-    <h6 routerLink="/admin">Admin Page</h6>
-    <h6 routerLink="/login">Log Out</h6>
+    <h6 routerLink="/admin" [ngClass]="{'hide': !currentUser.admin}">Admin Page</h6>
+    <h6 routerLink="/login" (click)="logout()">Log Out</h6>
   </div>
   </header>
 
   <div class="container">
     <div class="row">
+      <b class="wbdv-button wbdv-update" (click)="update()">Update</b>
+    </div>
+    <div class="row">
       <div class="wbdv-user-info col-sm-6">
         <div class="form-group row">
-          <label for="usernameFld" class="col-sm-2 col-form-label">Username</label>
-          <div class="col-sm-10">
+          <label for="usernameFld" class="col-sm-3 col-form-label">Username</label>
+          <div class="col-sm-9">
             <input id="usernameFld"
                    class="form-control"
                    value="{{currentUser.username}}"
-                   placeholder="JD123"
                    readonly
             />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="passwordFld" class="col-sm-2 col-form-label">Password</label>
-          <div class="col-sm-10">
+          <label for="passwordFld" class="col-sm-3 col-form-label">Password</label>
+          <div class="col-sm-9">
             <input id="passwordFld"
                    class="form-control"
                    value="{{currentUser.password}}"
-                   placeholder="345DJ"
-                   readonly
             />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="firstNameFld" class="col-sm-2 col-form-label">First Name</label>
-          <div class="col-sm-10">
+          <label for="firstNameFld" class="col-sm-3 col-form-label">First Name</label>
+          <div class="col-sm-9">
             <input id="firstNameFld"
                    class="form-control"
                    value="{{currentUser.firstName}}"
-                   placeholder="Jane"
-                   readonly
             />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="lastNameFld" class="col-sm-2 col-form-label">Last Name</label>
-          <div class="col-sm-10">
+          <label for="lastNameFld" class="col-sm-3 col-form-label">Last Name</label>
+          <div class="col-sm-9">
             <input id="lastNameFld"
                    class="form-control"
                    value="{{currentUser.lastName}}"
-                   placeholder="Doe"
-                   readonly
             />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="phoneFld" class="col-sm-2 col-form-label">Phone</label>
-          <div class="col-sm-10">
+          <label for="phoneFld" class="col-sm-3 col-form-label">Phone</label>
+          <div class="col-sm-9">
             <input id="phoneFld"
                    class="form-control"
-                   value="{{currentUser.phone}}"
-                   placeholder="123-456-789"
-                   readonly
+                   value="{{currentUser.phoneNumber}}"
             />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="emailFld" class="col-sm-2 col-form-label">Email</label>
-          <div class="col-sm-10">
+          <label for="emailFld" class="col-sm-3 col-form-label">Email</label>
+          <div class="col-sm-9">
             <input id="emailFld"
                    class="form-control"
                    value="{{currentUser.email}}"
-                   placeholder="jane@doe.com"
-                   readonly
             />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="addressFld" class="col-sm-2 col-form-label">Address</label>
-          <div class="col-sm-10">
+          <label for="addressFld" class="col-sm-3 col-form-label">Address</label>
+          <div class="col-sm-9">
             <input id="addressFld"
                    class="form-control"
                    value="{{currentUser.address}}"
-                   placeholder="123 Rainbow Road, Flavortown JK"
-                   readonly
             />
           </div>
         </div>
@@ -112,10 +102,11 @@
               1/16
             </td>
             <td>
-              <i class="fa-lg fa fa-search-plus wbdv-view" routerLink="/course/{{course.id}}"></i>
+              <i class="fa-lg fa fa-search-plus wbdv-view"></i>
             </td>
           </tr>
         </table>
       </div>
     </div>
+  </div>
 </div>

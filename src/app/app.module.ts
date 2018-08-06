@@ -22,6 +22,7 @@ import { CreateModalComponent } from './modals/create-modal/create-modal.compone
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditModalComponent } from './modals/edit-modal/edit-modal.component';
 import { UserServiceClient } from './services/user.service.client';
+import { SectionServiceClient } from './services/section.service.client';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { UserServiceClient } from './services/user.service.client';
   ],
   providers: [
     CourseServiceClient,
-    UserServiceClient
+    UserServiceClient,
+    SectionServiceClient
   ],
   bootstrap: [AppComponent]
 })

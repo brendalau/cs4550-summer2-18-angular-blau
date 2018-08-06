@@ -20,8 +20,6 @@ export class SectionsPageComponent implements OnInit {
       this.courseService.findCourseById(params['courseId'])
         .then(course => this.course = course);
     });
-    // this.sectionService.findSectionsByCourse(this.course.id)
-    //   .then(sections => this.sections = sections);
   }
 
 }

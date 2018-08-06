@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { SectionServiceClient } from '../../services/section.service.client';
 
 @Component({
   selector: 'app-create-modal-component',
@@ -8,9 +9,13 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./create-modal.component.css']
 })
 export class CreateModalComponent {
-  closeResult: string;
 
-  constructor(private modalService: NgbModal) {}
+  closeResult: string;
+  section: {};
+  @Input() selectedCourse: {};
+
+  constructor(private modalService: NgbModal,
+              private sectionService: SectionServiceClient) {}
 
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -20,13 +25,7 @@ export class CreateModalComponent {
     });
   }
 
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
-  }
+  createSection = section => {
+    this.section.courseId = this.selectedCourse.id;
+    this.sectionService.createSection(section);
 }

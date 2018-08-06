@@ -27,4 +27,9 @@ export class UserServiceClient {
       },
       body: JSON.stringify(user)
     })
+
+  logout = () =>
+    fetch(LOCALHOST_API_URL + '/logout', {
+      method: 'post'
+  })
 }

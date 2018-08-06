@@ -8,7 +8,7 @@ import { UserServiceClient } from '../../services/user.service.client';
 })
 export class ProfilePageComponent implements OnInit {
 
-  currentUser: {};s
+  currentUser: {};
 
   constructor(private userService: UserServiceClient) { }
 
@@ -19,4 +19,11 @@ export class ProfilePageComponent implements OnInit {
       );
   }
 
+  logout() {
+    this.userService.logout();
+  }
+
+  update() {
+
+  }
 }
