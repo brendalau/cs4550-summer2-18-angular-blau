@@ -8,7 +8,7 @@ import { CourseServiceClient } from '../../services/course.service.client';
 })
 export class CourseListComponent implements OnInit {
 
-  courses = [];
+  courses = <any>[];
 
   constructor(private courseService: CourseServiceClient) { }
 

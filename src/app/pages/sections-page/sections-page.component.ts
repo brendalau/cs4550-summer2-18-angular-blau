@@ -11,7 +11,7 @@ import { SectionServiceClient } from '../../services/section.service.client';
 export class SectionsPageComponent implements OnInit {
 
   courseId = String;
-  course = {};
+  course = <any>{};
   sections = <any>[];
 
   constructor(private activatedRoute: ActivatedRoute,

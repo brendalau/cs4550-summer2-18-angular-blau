@@ -9,9 +9,9 @@ import {CourseServiceClient} from '../../services/course.service.client';
 })
 export class CourseViewerComponent implements OnInit {
 
-  course = {};
-  selectedModule = {};
-  selectedLesson = {};
+  course = <any>{};
+  selectedModule = <any>{};
+  selectedLesson = <any>{};
 
   constructor(private activatedRoute: ActivatedRoute, private courseService: CourseServiceClient) { }
 

@@ -10,10 +10,10 @@ import {any} from "codelyzer/util/function";
 })
 export class AdminPageComponent implements OnInit {
 
-  courses = [];
+  courses = <any>[];
   selectedCourse = <any>{};
-  sections = [];
-  selectedSection = {};
+  sections = <any>[];
+  selectedSection = <any>{};
 
   constructor(private courseService: CourseServiceClient,
               private sectionService: SectionServiceClient) { }
