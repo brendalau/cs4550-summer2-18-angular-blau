@@ -14,10 +14,11 @@ export class UserServiceClient {
       body: JSON.stringify(user)
     })
 
-  currentUser = () =>
-    fetch(LOCALHOST_API_URL + '/currentUser', {
+  currentUser() {
+    return fetch(LOCALHOST_API_URL + '/currentUser', {
       credentials: 'include'
-    }).then(response => response.json())
+    }).then(response => response.json());
+  }
 
   register = (user) =>
     fetch(LOCALHOST_API_URL + '/register', {
@@ -30,6 +31,16 @@ export class UserServiceClient {
 
   logout = () =>
     fetch(LOCALHOST_API_URL + '/logout', {
-      method: 'post'
+      method: 'post',
+      credentials: 'include'
   })
+
+  updateUser = (user) =>
+    fetch(LOCALHOST_API_URL + '/profile', {
+      method: 'put',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
 }

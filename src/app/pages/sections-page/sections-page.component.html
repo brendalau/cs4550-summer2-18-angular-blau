@@ -10,20 +10,25 @@
       <td>Available</td>
       <td>&nbsp;</td>
     </tr>
-    <tr class="wbdv-section-row">
+    <tr class="wbdv-section-row"
+        *ngFor="let section of sections">
       <td class="wbdv-section-title spaced">
         <i class="fa-lg fa fa-file wbdv-file"></i>
-        CS5200 Section 1
+        {{section.title}}
       </td>
       <td class="wbdv-available">
-        1/16
+        {{section.available}}/{{section.seats}}
       </td>
       <td>
-    <span>
-        <i class="fa-lg fa fa-circle wbdv-enrolled"></i>
-    </span>
+        <span>
+          <!--tried to implement a conditional ngclass, but it strangely gets stuck in a recursion?-->
+          <!--<i class="fa-lg fa wbdv-enrolled"-->
+             <!--[ngClass]="confirmEnrollment(section._id) ? 'fa-circle-check' : 'fa-circle-thin'"-->
+             <!--(click)="confirmEnrollment(section._id) ? unenroll(section) : enroll(section)"></i>-->
+            <i class="fa-lg fa fa-circle-thin wbdv-enrolled"
+               (click)="confirmEnrollment(section._id) ? unenroll(section) : enroll(section)"></i>
+        </span>
       </td>
     </tr>
-
   </table>
 </div>

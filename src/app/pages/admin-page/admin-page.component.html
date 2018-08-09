@@ -3,7 +3,7 @@
     <i class="fa-lg fa fa-arrow-left wbdv-back" routerLink="/profile"></i>
     <h3>User Admin</h3>
     <div class="wbdv-register-login">
-      <h6>Home</h6>
+      <h6 routerLink="/home">Home</h6>
     </div>
   </header>
 
@@ -36,24 +36,24 @@
       <table border="0" class="wbdv-section-list col-sm-6">
         <tr class="wbdv-section-header-row">
           <td class="spaced">Section</td>
-          <td>Seats</td>
+          <td>Available</td>
           <td>&nbsp;</td>
         </tr>
 
         <tr class="wbdv-section-row"
-            *ngFor="let section of sections">
+            *ngFor="let section of sections"
+            (click)="selectSection(section)">
           <td class="wbdv-section-title spaced">
             <i class="fa-lg fa fa-file wbdv-file"></i>
             {{section.title}}
           </td>
-          <td class="wbdv-seats">
-            {{section.seats}}
+          <td class="wbdv-available">
+            {{section.available}}/{{section.seats}}
           </td>
           <td>
             <span>
-                <!--<i class="fa-lg fa fa-pencil wbdv-edit"></i>-->
-                <app-edit-modal-component></app-edit-modal-component>
-                <i class="fa-lg fa fa-times wbdv-remove"></i>
+                <app-edit-modal-component [selectedSection]="selectedSection"></app-edit-modal-component>
+                <i class="fa-lg fa fa-times wbdv-remove" (click)="deleteSection(section)"></i>
             </span>
           </td>
         </tr>

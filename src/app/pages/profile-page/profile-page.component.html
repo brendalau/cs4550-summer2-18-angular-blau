@@ -3,13 +3,14 @@
   <h3>Profile</h3>
   <div class="wbdv-admin-logout">
     <h6 routerLink="/admin" [ngClass]="{'hide': !currentUser.admin}">Admin Page</h6>
+    <h6 routerLink="/home">Home</h6>
     <h6 routerLink="/login" (click)="logout()">Log Out</h6>
   </div>
   </header>
 
   <div class="container">
     <div class="row">
-      <b class="wbdv-button wbdv-update" (click)="update()">Update</b>
+      <b class="wbdv-button wbdv-update" (click)="update(currentUser)">Update</b>
     </div>
     <div class="row">
       <div class="wbdv-user-info col-sm-6">
@@ -30,6 +31,7 @@
             <input id="passwordFld"
                    class="form-control"
                    value="{{currentUser.password}}"
+                   [(ngModel)]="currentUser.password"
             />
           </div>
         </div>
@@ -40,6 +42,7 @@
             <input id="firstNameFld"
                    class="form-control"
                    value="{{currentUser.firstName}}"
+                   [(ngModel)]="currentUser.firstName"
             />
           </div>
         </div>
@@ -50,6 +53,7 @@
             <input id="lastNameFld"
                    class="form-control"
                    value="{{currentUser.lastName}}"
+                   [(ngModel)]="currentUser.lastName"
             />
           </div>
         </div>
@@ -60,6 +64,7 @@
             <input id="phoneFld"
                    class="form-control"
                    value="{{currentUser.phoneNumber}}"
+                   [(ngModel)]="currentUser.phoneNumber"
             />
           </div>
         </div>
@@ -70,6 +75,7 @@
             <input id="emailFld"
                    class="form-control"
                    value="{{currentUser.email}}"
+                   [(ngModel)]="currentUser.email"
             />
           </div>
         </div>
@@ -80,6 +86,7 @@
             <input id="addressFld"
                    class="form-control"
                    value="{{currentUser.address}}"
+                   [(ngModel)]="currentUser.address"
             />
           </div>
         </div>
@@ -93,16 +100,17 @@
             <td>&nbsp;</td>
           </tr>
 
-          <tr class="wbdv-section-row">
+          <tr class="wbdv-section-row"
+              *ngFor="let enrollment of enrollments">
             <td class="wbdv-section-title spaced">
               <i class="fa-lg fa fa-file wbdv-file"></i>
-              CS5200 Section 1
+              {{enrollment.section.title}}
             </td>
             <td class="wbdv-available">
-              1/16
+              {{enrollment.section.available}}/{{enrollment.section.seats}}
             </td>
             <td>
-              <i class="fa-lg fa fa-search-plus wbdv-view"></i>
+              <i class="fa-lg fa fa-search-plus wbdv-view" routerLink="/course/{{enrollment.section.courseId}}"></i>
             </td>
           </tr>
         </table>

@@ -12,7 +12,6 @@ const appRoutes: Routes = [
   { path: 'registration', component: RegistrationPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'profile', component: ProfilePageComponent },
-  { path: 'registration', component: RegistrationPageComponent },
   { path: 'admin', component: AdminPageComponent },
   { path: 'course/:courseId', component: CourseViewerComponent },
   { path: 'course/:courseId/sections', component: SectionsPageComponent },

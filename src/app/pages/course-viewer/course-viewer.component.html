@@ -35,12 +35,13 @@
 
   <div class="col-sm-8 wbdv-widget-list">
     <ul class="list-group">
-      <li class="list-group-item wbdv-widget-list-item">
-        <app-heading-widget></app-heading-widget>
-        <app-image-widget></app-image-widget>
-        <app-link-widget></app-link-widget>
-        <app-list-widget></app-list-widget>
-        <app-paragraph-widget></app-paragraph-widget>
+      <li class="list-group-item wbdv-widget-list-item"
+          *ngFor="let widget of selectedLesson.widgets">
+        <app-heading-widget *ngIf="widget.type == 'HEADING'"></app-heading-widget>
+        <app-image-widget *ngIf="widget.type == 'IMAGE'"></app-image-widget>
+        <app-link-widget *ngIf="widget.type == 'LINK'"></app-link-widget>
+        <app-list-widget *ngIf="widget.type == 'LIST'"></app-list-widget>
+        <app-paragraph-widget *ngIf="widget.type == 'PARAGRAPH'"></app-paragraph-widget>
       </li>
     </ul>
   </div>

@@ -24,7 +24,6 @@ import { EditModalComponent } from './modals/edit-modal/edit-modal.component';
 import { UserServiceClient } from './services/user.service.client';
 import { SectionServiceClient } from './services/section.service.client';
 
-
 @NgModule({
   declarations: [
     AppComponent,

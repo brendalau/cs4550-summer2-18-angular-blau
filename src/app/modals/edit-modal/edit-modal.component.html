@@ -10,19 +10,25 @@
       <div class="row form-group">
         <label class="col-sm-3" for="sectionTitle">Section Title</label>
         <div class="input-group col-sm-9">
-          <input id="sectionTitle" class="form-control">
+          <input id="sectionTitle"
+                 class="form-control"
+                 [(ngModel)]="selectedSection.title"
+                 name="title">
         </div>
       </div>
       <div class="row form-group">
-        <label class="col-sm-3" for="available"># of Seats</label>
+        <label class="col-sm-3" for="seats"># of Seats</label>
         <div class="input-group col-sm-9">
-          <input id="available" class="form-control">
+          <input id="seats"
+                 class="form-control"
+                 [(ngModel)]="selectedSection.seats"
+                 name="seats">
         </div>
       </div>
     </form>
   </div>
   <div class="modal-footer">
-    <b class="wbdv-button wbdv-update" (click)="c('Save click')">Update</b>
+    <b class="wbdv-button wbdv-update" (click)="updateSection(selectedSection._id, selectedSection)">Update</b>
   </div>
 </ng-template>
 

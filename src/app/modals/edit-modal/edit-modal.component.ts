@@ -1,32 +1,26 @@
-import {Component} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { SectionServiceClient } from '../../services/section.service.client';
 
 @Component({
   selector: 'app-edit-modal-component',
   templateUrl: './edit-modal.component.html',
   styleUrls: ['./edit-modal.component.css']
 })
-export class EditModalComponent {
-  closeResult: string;
 
-  constructor(private modalService: NgbModal) {}
+export class EditModalComponent {
+
+  @Input() selectedSection = {};
+
+  constructor(private modalService: NgbModal,
+              private sectionService: SectionServiceClient) {}
 
   open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
   }
 
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
+  updateSection(sectionId, section) {
+    this.sectionService.updateSection(sectionId, section);
   }
 }
