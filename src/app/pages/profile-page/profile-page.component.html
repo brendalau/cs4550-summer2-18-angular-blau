@@ -1,0 +1,120 @@
+<div>
+  <header class="wbdv-profile-header">
+  <h3>Profile</h3>
+  <div class="wbdv-admin-logout">
+    <h6 routerLink="/admin" [ngClass]="{'hide': !currentUser.admin}">Admin Page</h6>
+    <h6 routerLink="/home">Home</h6>
+    <h6 routerLink="/login" (click)="logout()">Log Out</h6>
+  </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <b class="wbdv-button wbdv-update" (click)="update(currentUser)">Update</b>
+    </div>
+    <div class="row">
+      <div class="wbdv-user-info col-sm-6">
+        <div class="form-group row">
+          <label for="usernameFld" class="col-sm-3 col-form-label">Username</label>
+          <div class="col-sm-9">
+            <input id="usernameFld"
+                   class="form-control"
+                   value="{{currentUser.username}}"
+                   readonly
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="passwordFld" class="col-sm-3 col-form-label">Password</label>
+          <div class="col-sm-9">
+            <input id="passwordFld"
+                   class="form-control"
+                   value="{{currentUser.password}}"
+                   [(ngModel)]="currentUser.password"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="firstNameFld" class="col-sm-3 col-form-label">First Name</label>
+          <div class="col-sm-9">
+            <input id="firstNameFld"
+                   class="form-control"
+                   value="{{currentUser.firstName}}"
+                   [(ngModel)]="currentUser.firstName"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="lastNameFld" class="col-sm-3 col-form-label">Last Name</label>
+          <div class="col-sm-9">
+            <input id="lastNameFld"
+                   class="form-control"
+                   value="{{currentUser.lastName}}"
+                   [(ngModel)]="currentUser.lastName"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="phoneFld" class="col-sm-3 col-form-label">Phone</label>
+          <div class="col-sm-9">
+            <input id="phoneFld"
+                   class="form-control"
+                   value="{{currentUser.phoneNumber}}"
+                   [(ngModel)]="currentUser.phoneNumber"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="emailFld" class="col-sm-3 col-form-label">Email</label>
+          <div class="col-sm-9">
+            <input id="emailFld"
+                   class="form-control"
+                   value="{{currentUser.email}}"
+                   [(ngModel)]="currentUser.email"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="addressFld" class="col-sm-3 col-form-label">Address</label>
+          <div class="col-sm-9">
+            <input id="addressFld"
+                   class="form-control"
+                   value="{{currentUser.address}}"
+                   [(ngModel)]="currentUser.address"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <table border="0" class="wbdv-section-list">
+          <tr class="wbdv-section-header-row">
+            <td class="spaced">Section</td>
+            <td>Available</td>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr class="wbdv-section-row"
+              *ngFor="let enrollment of enrollments">
+            <td class="wbdv-section-title spaced">
+              <i class="fa-lg fa fa-file wbdv-file"></i>
+              {{enrollment.section.title}}
+            </td>
+            <td class="wbdv-available">
+              {{enrollment.section.available}}/{{enrollment.section.seats}}
+            </td>
+            <td>
+              <i class="fa-lg fa fa-search-plus wbdv-view" routerLink="/course/{{enrollment.section.courseId}}"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

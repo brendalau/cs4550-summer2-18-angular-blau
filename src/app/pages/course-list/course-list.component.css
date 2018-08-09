@@ -1,0 +1,92 @@
+td {
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.wbdv-home-page-header {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  display: inline-flex;
+  width: 100%
+}
+
+header.wbdv-home-page-header>h3 {
+  margin-left: 50px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+h6 {
+  margin-left: 20px;
+}
+
+h6:hover {
+  cursor: pointer;
+  color: #dcdcdc;
+}
+
+.wbdv-register-login {
+  margin-right: 50px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  float: right;
+  display: inline-flex;
+}
+
+.wbdv-course-header-row {
+  background-color: #563f46;
+  color: white;
+}
+
+.wbdv-course-list {
+  margin: 30px auto;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px #e6e6e6;
+}
+
+.spaced {
+  white-space: nowrap;
+  padding-right: 15%;
+}
+
+.wbdv-course-row {
+  color: #999999;
+}
+
+.wbdv-course-title {
+  color: black;
+}
+
+th, td {
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+a, a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+span>i {
+  cursor: pointer;
+}
+
+.wbdv-folder {
+  margin-right: 15px;
+}
+
+tr:hover.wbdv-course-row {
+  background-color: #f2f2f2;
+}
+
+.wbdv-enroll {
+  margin-right: 5px;
+}
+
+
+
+

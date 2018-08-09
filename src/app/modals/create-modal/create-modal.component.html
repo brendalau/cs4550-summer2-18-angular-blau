@@ -1,0 +1,36 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Create New Section</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form class>
+      <div class="row form-group">
+        <label class="col-sm-3" for="sectionTitle">Section Title</label>
+        <div class="input-group col-sm-9">
+          <input id="sectionTitle"
+                 class="form-control"
+                 [(ngModel)]="title"
+                 name="title">
+        </div>
+      </div>
+      <div class="row form-group">
+        <label class="col-sm-3" for="available"># of Seats</label>
+        <div class="input-group col-sm-9">
+          <input id="available"
+                 class="form-control"
+                 [(ngModel)]="seats"
+                 name="seats">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <b class="wbdv-button wbdv-create" (click)="createSection(selectedCourse.id.toString())">Create</b>
+  </div>
+</ng-template>
+
+<b class="wbdv-button wbdv-create-new" (click)="open(content)">Create New Section</b>
+

@@ -1,0 +1,48 @@
+<div>
+  <header class="wbdv-course-viewer-header">
+    <i class="fa-lg fa fa-arrow-left wbdv-back" routerLink="/home"></i>
+    <h3>Viewing: {{course.title}}</h3>
+  </header>
+
+  <aside class="col-sm-4">
+    <div>
+      <ul class="wbdv-module-list">
+        <li class="list-group-item wbdv-module-list-item"
+            *ngFor="let module of course.modules"
+            [ngClass]="{'active': module.id == selectedModule.id}"
+            (click)="selectModule(module)">
+          {{module.title}}
+        </li>
+      </ul>
+    </div>
+
+  </aside>
+
+  <div class="col-sm-8" id="wbdv-lesson-tabs">
+    <div class="row">
+      <ul class="nav nav-tabs">
+        <li class="nav-item"
+            *ngFor="let lesson of selectedModule.lessons"
+            (click)="selectLesson(lesson)">
+          <a class="nav-item wbdv-lesson-tab"
+             [ngClass]="{'active': lesson.id == selectedLesson.id}">
+            {{lesson.title}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-sm-8 wbdv-widget-list">
+    <ul class="list-group">
+      <li class="list-group-item wbdv-widget-list-item"
+          *ngFor="let widget of selectedLesson.widgets">
+        <app-heading-widget *ngIf="widget.type == 'HEADING'"></app-heading-widget>
+        <app-image-widget *ngIf="widget.type == 'IMAGE'"></app-image-widget>
+        <app-link-widget *ngIf="widget.type == 'LINK'"></app-link-widget>
+        <app-list-widget *ngIf="widget.type == 'LIST'"></app-list-widget>
+        <app-paragraph-widget *ngIf="widget.type == 'PARAGRAPH'"></app-paragraph-widget>
+      </li>
+    </ul>
+  </div>
+</div>

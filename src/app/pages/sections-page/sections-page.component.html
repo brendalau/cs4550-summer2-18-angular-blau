@@ -1,0 +1,34 @@
+<div>
+  <header class="wbdv-sections-page-header">
+    <i class="fa-lg fa fa-arrow-left wbdv-back" routerLink="/home"></i>
+    <h3>Sections for: {{course.title}}</h3>
+  </header>
+
+  <table border="0" class="wbdv-section-list">
+    <tr class="wbdv-section-header-row">
+      <td class="spaced">Section</td>
+      <td>Available</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr class="wbdv-section-row"
+        *ngFor="let section of sections">
+      <td class="wbdv-section-title spaced">
+        <i class="fa-lg fa fa-file wbdv-file"></i>
+        {{section.title}}
+      </td>
+      <td class="wbdv-available">
+        {{section.available}}/{{section.seats}}
+      </td>
+      <td>
+        <span>
+          <!--tried to implement a conditional ngclass, but it strangely gets stuck in a recursion?-->
+          <!--<i class="fa-lg fa wbdv-enrolled"-->
+             <!--[ngClass]="confirmEnrollment(section._id) ? 'fa-circle-check' : 'fa-circle-thin'"-->
+             <!--(click)="confirmEnrollment(section._id) ? unenroll(section) : enroll(section)"></i>-->
+            <i class="fa-lg fa fa-circle-thin wbdv-enrolled"
+               (click)="confirmEnrollment(section._id) ? unenroll(section) : enroll(section)"></i>
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>

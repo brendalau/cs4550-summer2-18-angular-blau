@@ -1,0 +1,65 @@
+<div>
+  <header class="wbdv-admin-page-header">
+    <i class="fa-lg fa fa-arrow-left wbdv-back" routerLink="/profile"></i>
+    <h3>User Admin</h3>
+    <div class="wbdv-register-login">
+      <h6 routerLink="/home">Home</h6>
+    </div>
+  </header>
+
+  <div class="wbdv-course-section">
+    <div class="row">
+      <app-create-modal-component [selectedCourse]="selectedCourse"></app-create-modal-component>
+    </div>
+
+    <div class="row wbdv-course-section-row">
+      <table border="0" class="wbdv-course-list col-sm-4">
+        <tr class="wbdv-course-header-row">
+          <td class="spaced">Title</td>
+          <td>Instructor</td>
+        </tr>
+
+        <tr class="wbdv-course-row"
+            *ngFor="let course of courses"
+            [ngClass]="{'active': course.id == selectedCourse.id}"
+            (click)="selectCourse(course)">
+          <td class="wbdv-course-title spaced">
+            <i class="fa-lg fa fa-folder wbdv-folder"></i>
+            {{course.title}}
+          </td>
+          <td class="wbdv-instructor">
+            Me
+          </td>
+        </tr>
+      </table>
+
+      <table border="0" class="wbdv-section-list col-sm-6">
+        <tr class="wbdv-section-header-row">
+          <td class="spaced">Section</td>
+          <td>Available</td>
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr class="wbdv-section-row"
+            *ngFor="let section of sections"
+            (click)="selectSection(section)">
+          <td class="wbdv-section-title spaced">
+            <i class="fa-lg fa fa-file wbdv-file"></i>
+            {{section.title}}
+          </td>
+          <td class="wbdv-available">
+            {{section.available}}/{{section.seats}}
+          </td>
+          <td>
+            <span>
+                <app-edit-modal-component [selectedSection]="selectedSection"></app-edit-modal-component>
+                <i class="fa-lg fa fa-times wbdv-remove" (click)="deleteSection(section)"></i>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+</div>

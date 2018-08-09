@@ -1,0 +1,35 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Section</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form class>
+      <div class="row form-group">
+        <label class="col-sm-3" for="sectionTitle">Section Title</label>
+        <div class="input-group col-sm-9">
+          <input id="sectionTitle"
+                 class="form-control"
+                 [(ngModel)]="selectedSection.title"
+                 name="title">
+        </div>
+      </div>
+      <div class="row form-group">
+        <label class="col-sm-3" for="seats"># of Seats</label>
+        <div class="input-group col-sm-9">
+          <input id="seats"
+                 class="form-control"
+                 [(ngModel)]="selectedSection.seats"
+                 name="seats">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <b class="wbdv-button wbdv-update" (click)="updateSection(selectedSection._id, selectedSection)">Update</b>
+  </div>
+</ng-template>
+
+<i class="fa-lg fa fa-pencil wbdv-edit" (click)="open(content)"></i>

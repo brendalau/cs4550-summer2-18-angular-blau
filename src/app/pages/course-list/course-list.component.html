@@ -1,0 +1,33 @@
+<div>
+  <header class="wbdv-home-page-header">
+    <h3>Home Page</h3>
+    <div class="wbdv-register-login">
+      <h6 routerLink="/registration">Register</h6>
+      <h6 routerLink="/login">Log In</h6>
+    </div>
+  </header>
+
+  <table border="0" class="wbdv-course-list">
+    <tr class="wbdv-course-header-row">
+      <td class="spaced">Title</td>
+      <td>Instructor</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr class="wbdv-course-row"
+        *ngFor="let course of courses">
+      <td class="wbdv-course-title spaced">
+        <i class="fa-lg fa fa-folder wbdv-folder"></i>
+        {{course.title}}
+      </td>
+      <td class="wbdv-instructor">
+        Prof. JA
+      </td>
+      <td>
+        <span>
+            <i class="fa-lg fa fa-edit wbdv-enroll" routerLink="/course/{{course.id}}/sections"></i>
+            <i class="fa-lg fa fa-search-plus wbdv-view" routerLink="/course/{{course.id}}"></i>
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>
