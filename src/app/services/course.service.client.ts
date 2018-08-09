@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 
-const COURSE_API_URL = 'https://cs4550-summer2-18-node-blau.herokuapp.com/api/course';
+const COURSE_API_URL = 'https://cs4550-summer2-18-sprngbt-blau.herokuapp.com/api/course';
 
 @Injectable()
 export class CourseServiceClient {
