@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { SectionServiceClient } from '../../services/section.service.client';
+import { SectionServiceClient } from '../../../services/section.service.client';
 
 @Component({
   selector: 'app-create-modal-component',

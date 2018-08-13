@@ -1,0 +1,26 @@
+<div class="wbdv-question-content">
+  <div class="wbdv-question-header">
+    <h4 class="wbdv-question-title">
+      {{question.title}}
+    </h4>
+
+    <h4 class="wbdv-question-points">
+      {{question.points}} pts
+    </h4>
+  </div>
+
+  <div>
+    <p>{{question.description}}</p>
+  </div>
+
+  <div>
+    <span *ngFor="let blank of question.blanks">
+      <span *ngIf="blank.indexOf('*') == -1">
+        {{blank}}
+      </span>
+      <span *ngIf="blank.indexOf('*') == 0">
+        <input>
+      </span>
+    </span>
+  </div>
+</div>
