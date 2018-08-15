@@ -15,10 +15,10 @@
 
   <div>
     <div class="wbdv-question-choice" *ngFor="let choice of question.choices">
-      <label *ngIf="choice.value == 'A'"><input type="radio" name="Mchoice">A. {{choice.text}}</label>
-      <label *ngIf="choice.value == 'B'"><input type="radio" name="Mchoice">B. {{choice.text}}</label>
-      <label *ngIf="choice.value == 'C'"><input type="radio" name="Mchoice">C. {{choice.text}}</label>
-      <label *ngIf="choice.value == 'D'"><input type="radio" name="Mchoice">D. {{choice.text}}</label>
+      <label *ngIf="choice.value == 'A'"><input type="radio" name="Mchoice" (click)="selected(choice)">A. {{choice.text}}</label>
+      <label *ngIf="choice.value == 'B'"><input type="radio" name="Mchoice" (click)="selected(choice)">B. {{choice.text}}</label>
+      <label *ngIf="choice.value == 'C'"><input type="radio" name="Mchoice" (click)="selected(choice)">C. {{choice.text}}</label>
+      <label *ngIf="choice.value == 'D'"><input type="radio" name="Mchoice" (click)="selected(choice)">D. {{choice.text}}</label>
     </div>
   </div>
 </div>

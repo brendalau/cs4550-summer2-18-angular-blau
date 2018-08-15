@@ -7,11 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EssayQuestionComponent implements OnInit {
 
-  @Input() question: {};
+  @Input() question = <any>{};
 
   constructor() {}
 
   ngOnInit() {
+    this.question.essayAnswer = '';
   }
-
 }

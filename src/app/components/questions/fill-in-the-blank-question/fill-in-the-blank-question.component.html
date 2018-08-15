@@ -19,7 +19,7 @@
         {{blank}}
       </span>
       <span *ngIf="blank.indexOf('*') == 0">
-        <input>
+        <input [(ngModel)]="question.fillInTheBlankAnswers[blank.split('=')[0].replace('*','')]">
       </span>
     </span>
   </div>

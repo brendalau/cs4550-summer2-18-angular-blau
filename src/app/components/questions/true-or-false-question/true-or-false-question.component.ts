@@ -7,11 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TrueOrFalseQuestionComponent implements OnInit {
 
-  @Input() question: {};
+  @Input() question = <any>{};
 
   constructor() { }
 
   ngOnInit() {
+    this.question.trueOrFalseAnswer = <any>{};
   }
 
+  selected(boolean) {
+    this.question.trueOrFalseAnswer = boolean;
+  }
 }

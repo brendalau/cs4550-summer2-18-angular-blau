@@ -5,6 +5,19 @@
   color: white;
 }
 
+div.alert {
+ margin: 20px auto;
+}
+.alert-info {
+  background-color: #c8c3cc;
+  border-color: #563f46;
+  color: black;
+}
+
+div.alert.hide {
+  display: none;
+}
+
 div.wbdv-quiz {
   margin: 30px auto;
 }

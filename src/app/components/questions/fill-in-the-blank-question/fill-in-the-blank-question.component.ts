@@ -7,10 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FillInTheBlankQuestionComponent implements OnInit {
 
-  @Input() question: {};
+  @Input() question = <any>{};
 
   constructor() { }
 
   ngOnInit() {
+    this.question.fillInTheBlankAnswers = <any>{};
   }
 }
