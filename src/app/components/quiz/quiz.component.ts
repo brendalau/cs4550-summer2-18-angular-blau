@@ -61,7 +61,7 @@ export class QuizComponent implements OnInit {
           question: question._id,
           multipleChoiceAnswer: question.multipleChoiceAnswer
         });
-      } else if (question.trueOrFalseAnswer !== null) {
+      } else if (question.trueOrFalseAnswer === true || question.trueOrFalseAnswer === false) {
         this.answers.push({
           question: question._id,
           trueFalseAnswer: question.trueOrFalseAnswer
