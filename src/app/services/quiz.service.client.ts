@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
-const QUIZ_API_URL = 'http://localhost:3000/api/quiz';
-const QUESTION_API_URL = 'http://localhost:3000/api/question';
+const QUIZ_API_URL = 'https://cs4550-summer2-18-node-blau.herokuapp.com/api/quiz';
+const QUESTION_API_URL = 'https://cs4550-summer2-18-node-blau.herokuapp.com/api/question';
 
 
 @Injectable()
