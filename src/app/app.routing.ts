@@ -8,6 +8,8 @@ import { SectionsPageComponent } from './pages/sections-page/sections-page.compo
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { QuizListComponent } from './pages/quiz-list/quiz-list.component';
 import { QuizComponent } from './components/quiz/quiz.component';
+import { QuizSubmissionsComponent } from './pages/quiz-submissions/quiz-submissions.component';
+import { QuizAnswersComponent } from './pages/quiz-answers/quiz-answers.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: CourseListComponent },
@@ -19,6 +21,8 @@ const appRoutes: Routes = [
   { path: 'course/:courseId/sections', component: SectionsPageComponent },
   { path: 'quizzes', component: QuizListComponent },
   { path: 'quiz/:quizId', component: QuizComponent },
+  { path: 'quiz/:quizId/submissions', component: QuizSubmissionsComponent },
+  { path: 'quiz/:quizId/submission/:submissionId', component: QuizAnswersComponent },
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

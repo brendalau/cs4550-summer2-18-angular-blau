@@ -3,20 +3,28 @@ td {
   border-top: 1px solid #e6e6e6;
 }
 
-.wbdv-quiz-list-header {
+.wbdv-submission-list-header {
   margin: 0;
   padding: 0;
   background-color: black;
   color: white;
-  display: inline-flex;
-  width: 100%
 }
 
-header.wbdv-quiz-list-header>h3 {
-  margin-left: 50px;
+header.wbdv-submission-list-header>h3 {
   margin-bottom: 0px;
   padding-top: 20px;
   padding-bottom: 15px;
+  padding-right: 10px;
+}
+
+header.wbdv-submission-list-header>h3, header.wbdv-submission-list-header>i {
+  display: inline-block;
+}
+
+.wbdv-back {
+  margin: auto 30px;
+  cursor: pointer;
+  vertical-align: 25%;
 }
 
 h6 {
@@ -28,21 +36,12 @@ h6:hover {
   color: #dcdcdc;
 }
 
-.wbdv-home-profile {
-  margin-right: 50px;
-  margin-bottom: 0px;
-  padding-top: 30px;
-  padding-bottom: 15px;
-  float: right;
-  display: inline-flex;
-}
-
-.wbdv-quiz-header-row {
+.wbdv-submission-list-header-row {
   background-color: #563f46;
   color: white;
 }
 
-.wbdv-quiz-list {
+.wbdv-submission-list {
   margin: 30px auto;
   background-color: white;
   box-shadow: 0px 2px 4px 0px #e6e6e6;
@@ -50,14 +49,14 @@ h6:hover {
 
 .spaced {
   white-space: nowrap;
-  padding-right: 75%;
+  padding-right: 15%;
 }
 
-.wbdv-quiz-row {
+.wbdv-submission-row {
   color: #999999;
 }
 
-.wbdv-quiz-title {
+.wbdv-submission-title {
   color: black;
 }
 
@@ -75,18 +74,25 @@ span>i {
   cursor: pointer;
 }
 
-.wbdv-file-alt {
+.wbdv-user {
   margin-right: 15px;
 }
 
-tr:hover.wbdv-quiz-row {
+tr:hover.wbdv-submission-row {
   background-color: #f2f2f2;
 }
 
-.wbdv-take {
-  margin-right: 5px;
+.wbdv-filter-row {
+  background-color: #d9d6dc;
 }
 
+.wbdv-search {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
 
 
 

@@ -1,0 +1,45 @@
+<div>
+  <header class="wbdv-submission-list-header">
+    <i class="fa-lg fa fa-arrow-left wbdv-back" routerLink="/quizzes"></i>
+    <h3>Submissions for: {{quiz.title}}</h3>
+  </header>
+
+  <table border="0" class="wbdv-submission-list">
+    <thead [ngClass]="{'hide': !currentUser.admin}">
+      <tr class="wbdv-filter-row">
+        <td colSpan="2">
+          <input id="wbdv-username-filter"
+                 class="form-control"
+                 placeholder="Search by student"
+                 [(ngModel)]="searchedUsername"/>
+        </td>
+        <td>
+          <i class="fa-lg fa fa-search wbdv-search" (click)="search(searchedUsername)"></i>
+        </td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="wbdv-submission-list-header-row">
+        <td class="spaced">Student</td>
+        <td>Submitted on</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="wbdv-submission-row"
+          *ngFor="let submission of filteredSubmissions">
+        <td class="wbdv-submission-title spaced">
+          <i class="fa-lg fa fa-user wbdv-user"></i>
+          {{submission.student.username}}
+        </td>
+        <td class="spaced">
+          {{submission.timestamp | date:'medium'}}
+        </td>
+        <td>
+          <span>
+              <i class="fa-lg fa fa-align-left" routerLink="/quiz/{{quiz._id}}/submission/{{submission._id}}"></i>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

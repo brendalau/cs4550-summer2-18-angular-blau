@@ -28,4 +28,14 @@ export class QuizServiceClient {
       headers: {'content-type': 'application/json'}
     });
   }
+
+  findSubmissionById(quizId, submissionId) {
+    return fetch(QUIZ_API_URL + '/' + quizId + '/submission/' + submissionId)
+      .then(response => response.json());
+  }
+
+  findAllSubmissionsForQuiz(quizId) {
+    return fetch(QUIZ_API_URL + '/' + quizId + '/submissions')
+      .then(response => response.json());
+  }
 }

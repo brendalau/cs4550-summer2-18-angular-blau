@@ -10,22 +10,18 @@
   <table border="0" class="wbdv-quiz-list">
     <tr class="wbdv-quiz-header-row">
       <td class="spaced">Title</td>
-      <td>Submissions</td>
       <td>&nbsp;</td>
     </tr>
     <tr class="wbdv-quiz-row"
         *ngFor="let quiz of quizzes">
       <td class="wbdv-quiz-title spaced">
-        <i class="fa-lg fa fa-file-alt wbdv-file-alt"></i>
+        <i class="fas fa-file-alt wbdv-file-alt"></i>
         {{quiz.title}}
-      </td>
-      <td>
-        ??
       </td>
       <td>
         <span>
             <i class="fa-lg fa fa-edit wbdv-take" routerLink="/quiz/{{quiz._id}}"></i>
-            <i class="fa-lg fa fa-search-plus wbdv-view"></i>
+            <i class="fa-lg fa fa-search-plus wbdv-view" routerLink="/quiz/{{quiz._id}}/submissions"></i>
         </span>
       </td>
     </tr>

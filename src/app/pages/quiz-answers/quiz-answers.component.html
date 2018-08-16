@@ -1,0 +1,48 @@
+<div>
+  <header class="wbdv-quiz-answers-header">
+    <i class="fa-lg fa fa-arrow-left wbdv-back" routerLink="/quiz/{{quiz._id}}/submissions"></i>
+    <h3>{{quiz.title}} Submission ({{submission.student.username}})</h3>
+  </header>
+
+  <div class="col-sm-8 wbdv-quiz-answers">
+    <ul class="list-group">
+      <li class="list-group-item wbdv-answer"
+          *ngFor="let answer of submission.answers">
+        <div class="wbdv-question-content">
+          <div class="wbdv-question-header">
+            <h4 class="wbdv-question-title">
+              {{answer.question.title}}
+            </h4>
+
+            <h4 class="wbdv-question-points">
+              {{answer.question.points}} pts
+            </h4>
+          </div>
+
+          <div>
+            <p>{{answer.question.description}}</p>
+          </div>
+
+          <div *ngIf="answer.essayAnswer">
+            {{answer.essayAnswer}}
+          </div>
+
+          <div *ngIf="answer.multipleChoiceAnswer">
+            Choice {{answer.multipleChoiceAnswer}}
+          </div>
+
+          <div *ngIf="answer.trueFalseAnswer != null">
+            {{answer.trueFalseAnswer}}
+          </div>
+
+          <div *ngIf="answer.fillBlanksAnswer">
+            <div *ngFor="let blankAnswer of toAnswerString(answer.fillBlanksAnswer)">
+              {{blankAnswer}}
+            </div>
+          </div>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</div>

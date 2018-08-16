@@ -34,8 +34,7 @@ export class QuizComponent implements OnInit {
 
     this.activatedRoute.params.subscribe(params => {
       this.quizService.findQuizById(params['quizId'])
-        .then(quiz => this.quiz = quiz
-        );
+        .then(quiz => this.quiz = quiz);
     });
   }
 
