@@ -1,9 +1,10 @@
 <div>
   <header class="wbdv-profile-header">
   <h3>Profile</h3>
-  <div class="wbdv-admin-logout">
+  <div class="wbdv-admin-quizzes-logout">
     <h6 routerLink="/admin" [ngClass]="{'hide': !currentUser.admin}">Admin Page</h6>
     <h6 routerLink="/home">Home</h6>
+    <h6 routerLink="/quizzes">Quizzes</h6>
     <h6 routerLink="/login" (click)="logout()">Log Out</h6>
   </div>
   </header>

@@ -1,0 +1,17 @@
+div.wbdv-question-content {
+  margin: auto;
+  padding: 10px;
+}
+
+div.wbdv-question-header {
+  display: block;
+}
+
+div.wbdv-question-header>h4 {
+  display: inline-block;
+}
+
+h4.wbdv-question-points {
+  float: right;
+}
+

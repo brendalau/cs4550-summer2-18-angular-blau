@@ -1,0 +1,92 @@
+td {
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.wbdv-quiz-list-header {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  display: inline-flex;
+  width: 100%
+}
+
+header.wbdv-quiz-list-header>h3 {
+  margin-left: 50px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+h6 {
+  margin-left: 20px;
+}
+
+h6:hover {
+  cursor: pointer;
+  color: #dcdcdc;
+}
+
+.wbdv-home-profile {
+  margin-right: 50px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  float: right;
+  display: inline-flex;
+}
+
+.wbdv-quiz-header-row {
+  background-color: #563f46;
+  color: white;
+}
+
+.wbdv-quiz-list {
+  margin: 30px auto;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px #e6e6e6;
+}
+
+.spaced {
+  white-space: nowrap;
+  padding-right: 75%;
+}
+
+.wbdv-quiz-row {
+  color: #999999;
+}
+
+.wbdv-quiz-title {
+  color: black;
+}
+
+th, td {
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+a, a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+span>i {
+  cursor: pointer;
+}
+
+.wbdv-file-alt {
+  margin-right: 15px;
+}
+
+tr:hover.wbdv-quiz-row {
+  background-color: #f2f2f2;
+}
+
+.wbdv-take {
+  margin-right: 5px;
+}
+
+
+
+

@@ -1,0 +1,43 @@
+<div>
+  <header class="wbdv-quiz-header">
+    <i class="fa-lg fa fa-arrow-left wbdv-back" routerLink="/quizzes"></i>
+    <h3>Taking: {{quiz.title}}</h3>
+  </header>
+
+  <div class="alert alert-info col-sm-8"
+       role="alert" id="successAlert"
+       [ngClass]="{'hide': !successAlert}">
+    Quiz has been submitted
+  </div>
+
+  <div class="alert alert-info col-sm-8"
+       role="alert" id="userAlert"
+       [ngClass]="{'hide': !userAlert}">
+    Must be logged in to take a quiz
+  </div>
+
+  <div class="alert alert-info col-sm-8"
+       role="alert" id="answersAlert"
+       [ngClass]="{'hide': !answersAlert}">
+    All questions must be answered in order to submit
+  </div>
+
+  <div class="col-sm-8 wbdv-quiz">
+    <ul class="list-group">
+      <li class="list-group-item wbdv-question"
+          *ngFor="let question of quiz.questions">
+        <app-essay-question *ngIf="question.questionType == 'ESSAY'" [question]="question"></app-essay-question>
+        <app-fill-in-the-blank-question *ngIf="question.questionType == 'FILL_BLANK'" [question]="question"></app-fill-in-the-blank-question>
+        <app-multiple-choice-question *ngIf="question.questionType == 'MULTI_CHOICE'" [question]="question"></app-multiple-choice-question>
+        <app-true-or-false-question *ngIf="question.questionType == 'TRUE_FALSE'" [question]="question"></app-true-or-false-question>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-sm-8 wbdv-submit-cancel">
+    <span>
+      <b class="wbdv-button wbdv-submit" (click)="submit()">Submit</b>
+      <b class="wbdv-button wbdv-cancel" routerLink="/quizzes">Cancel</b>
+    </span>
+  </div>
+</div>
